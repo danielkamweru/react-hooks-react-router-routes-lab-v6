@@ -3,10 +3,34 @@ import { useParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
 
 const movies = [
-  { id: 1, title: "Doctor Strange", time: 115, genres: ["Action", "Fantasy"] },
-  { id: 2, title: "Black Panther", time: 134, genres: ["Action", "Adventure"] },
-  { id: 3, title: "Captain Marvel", time: 123, genres: ["Action", "Sci-Fi"] },
-  { id: 4, title: "Sky High", time: 100, genres: ["Action", "Comedy"] },
+  {
+    id: 1,
+    title: "Doctor Strange",
+    time: 115,
+    genres: ["Action", "Fantasy"],
+    image: "https://example.com/doctor-strange.jpg",
+  },
+  {
+    id: 2,
+    title: "Black Panther",
+    time: 134,
+    genres: ["Action", "Adventure"],
+    image: "https://example.com/black-panther.jpg",
+  },
+  {
+    id: 3,
+    title: "Captain Marvel",
+    time: 123,
+    genres: ["Action", "Sci-Fi"],
+    image: "https://example.com/captain-marvel.jpg",
+  },
+  {
+    id: 4,
+    title: "Sky High",
+    time: 100,
+    genres: ["Action", "Comedy"],
+    image: "https://example.com/sky-high.jpg",
+  },
 ];
 
 function Movie() {
@@ -25,6 +49,9 @@ function Movie() {
           <li key={index}>{genre}</li>
         ))}
       </ul>
+
+      {/* ✅ Added image with alt text matching the title */}
+      <img src={movie.image} alt={movie.title} />
     </div>
   );
 }
