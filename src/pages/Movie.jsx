@@ -49,8 +49,6 @@ function Movie() {
           <li key={index}>{genre}</li>
         ))}
       </ul>
-
-      {/* ✅ Added image with alt text matching the title */}
       <img src={movie.image} alt={movie.title} />
     </div>
   );
